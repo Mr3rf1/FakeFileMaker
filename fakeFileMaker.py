@@ -17,7 +17,7 @@ hajm = float(input("Enter size as mg: "))
 
 if not file_name in listdir('./'):
     with open(file_name, 'wb') as file:
-        file.close()
+        pass
 else:
     print("file exists.")
     exit(0)
@@ -27,10 +27,8 @@ with open(file_name, 'r+b') as file:
     # file.write(b'A'*int(hajm*1000*1000))
     if mod.upper() == 'MG':
     	file.write(b'A'*int(hajm*1000*1000))
-    	file.close()
     elif mod.upper() == 'KB':
     	file.write(b'A'*int(hajm*1000))
-    	file.close()
     
 size = getsize(file_name)
 
