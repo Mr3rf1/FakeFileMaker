@@ -1,4 +1,3 @@
-from os.path import getsize
 from os import listdir
 from time import sleep
 
@@ -22,14 +21,11 @@ else:
     print("file exists.")
     exit(0)
 
-size = getsize(file_name)
 with open(file_name, 'r+b') as file:
     # file.write(b'A'*int(hajm*1000*1000))
     if mod.upper() == 'MG':
     	file.write(b'A'*int(hajm*1000*1000))
     elif mod.upper() == 'KB':
     	file.write(b'A'*int(hajm*1000))
-    
-size = getsize(file_name)
 
 print(f"-------------\nSuccesfully Created :)\nname: {file_name}\nsize: {hajm}")
